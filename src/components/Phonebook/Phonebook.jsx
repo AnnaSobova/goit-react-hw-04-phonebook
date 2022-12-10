@@ -9,15 +9,14 @@ const Phonebook =({onSubmit})=> {
        const [name, setName]= useState('');
        const [number,setNumber]= useState('');
       
-         const handleChange = event =>{
-         const{name,value}=event.currentTarget;
-         
-         switch ({name}){
+         const handleChange = e =>{
+        //  const{name,value}=event.currentTarget;??
+         switch (e.currentTarget.name){
          case 'name':
-         setName ({value});
+         setName (e.currentTarget.value);
          break;
          case 'number':
-         setNumber({value})
+         setNumber(e.currentTarget.value)
          break;
          default:
          return;
