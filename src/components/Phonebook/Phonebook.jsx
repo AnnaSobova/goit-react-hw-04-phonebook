@@ -11,6 +11,7 @@ const Phonebook =({onSubmit})=> {
       
          const handleChange = event =>{
          const{name,value}=event.currentTarget;
+         
          switch ({name}){
          case 'name':
          setName ({value});
